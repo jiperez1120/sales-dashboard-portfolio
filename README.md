@@ -18,7 +18,8 @@ Este dashboard está diseñado con una arquitectura que facilita la conexión co
 *   **CRM (Salesforce / HubSpot):** Sincronización bidireccional de objetos de Pipeline y Forecast mediante APIs REST. 
 *   **Sales Engagement (Outreach / Salesloft):** Tracking automatizado de secuencias y actividad de prospección integrada en el tablero Kanban.
 *   **Conversation Intelligence (Gong / Chorus):** Análisis de señales de compra mediante NLP para ajustar automáticamente la probabilidad de cierre de deals.
-*   **Data Warehouse (Snowflake / BigQuery):** Capacidad de visualización de métricas históricas complejas y análisis de atribución.
+*   **Data Warehouse (Snowflake / BigQuery):** Capacidad de visualización de métricas
+*   # Finished updatehistóricas complejas y análisis de atribución.
 
 ---
 

@@ -33,7 +33,6 @@ Este dashboard está diseñado con una arquitectura que facilita la conexión co
 Si buscas un perfil que entienda el **negocio** (Closing) y la **tecnología** (Stack & Automation) para escalar los ingresos de tu compañía:
 
 - **LinkedIn:** [Jorge Ignacio Pérez González](https://www.linkedin.com/in/jorge-ignacio-perez-gonzalez/)
-- **Email:** [Tu Email Profesional]
 
 ---
 *Este proyecto demuestra que las ventas modernas no se tratan solo de intuición, sino de datos accionables e integraciones inteligentes.*

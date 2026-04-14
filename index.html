@@ -16,38 +16,43 @@
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
     <div class="flex min-h-screen">
-        <aside class="w-64 gradient-bg text-white p-6 hidden lg:block">
+        <!-- Sidebar -->
+        <aside class="w-64 gradient-bg text-white p-6 hidden lg:flex flex-col">
             <div class="flex items-center gap-3 mb-10">
                 <div class="bg-blue-600 p-2 rounded-lg"><i class="fas fa-rocket"></i></div>
                 <span class="font-bold text-xl tracking-tight">RevOps Pro</span>
             </div>
-            <nav class="space-y-4">
+            <nav class="space-y-4 flex-1">
                 <a href="#" class="flex items-center gap-3 text-blue-400 bg-slate-800/50 p-3 rounded-lg"><i class="fas fa-chart-line"></i> Dashboard</a>
                 <a href="#" class="flex items-center gap-3 hover:text-blue-400 transition p-3"><i class="fas fa-funnel-dollar"></i> Pipeline</a>
                 <a href="#" class="flex items-center gap-3 hover:text-blue-400 transition p-3"><i class="fas fa-users"></i> Accounts</a>
+                <a href="#" class="flex items-center gap-3 hover:text-blue-400 transition p-3"><i class="fas fa-microphone-alt"></i> Gong Insights</a>
             </nav>
-            <div class="mt-auto pt-10 border-t border-slate-700">
+            <div class="pt-10 border-t border-slate-700">
                 <p class="text-xs text-slate-400 uppercase font-bold mb-4">Account Executive</p>
                 <p class="text-sm font-medium">Jorge Ignacio Pérez González</p>
                 <p class="text-xs text-slate-500">Madrid, Spain</p>
             </div>
         </aside>
 
+        <!-- Main Content -->
         <main class="flex-1 p-4 lg:p-8 overflow-y-auto">
+            <!-- Disclaimer -->
             <div class="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8 rounded-r-lg">
                 <div class="flex items-center gap-3">
                     <i class="fas fa-exclamation-triangle text-amber-500"></i>
                     <div>
                         <p class="text-sm text-amber-800 font-bold">Portfolio Disclaimer</p>
-                        <p class="text-xs text-amber-700">This dashboard uses simulated data for representative purposes. All financial figures, client names, and performance metrics are mockups designed to demonstrate RevOps strategy and technical execution without disclosing confidential information from past employers.</p>
+                        <p class="text-xs text-amber-700">Simulated data for demonstration purposes. This dashboard showcases RevOps and CRM integration skills using mock figures.</p>
                     </div>
                 </div>
             </div>
 
-            <header class="flex justify-between items-center mb-8 bg-white p-4 rounded-xl shadow-sm">
+            <!-- Header -->
+            <header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 bg-white p-6 rounded-xl shadow-sm">
                 <div>
-                    <h1 class="text-2xl font-bold">Enterprise Sales Performance</h1>
-                    <p class="text-slate-500 text-sm">Strategic Revenue Management Dashboard</p>
+                    <h1 class="text-2xl font-bold">Enterprise Sales & Intelligence</h1>
+                    <p class="text-slate-500 text-sm">Strategic Revenue Management • Real-time Insights</p>
                 </div>
                 <div class="flex gap-4">
                     <button id="syncBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition shadow-lg shadow-blue-200">
@@ -55,11 +60,12 @@
                     </button>
                     <div class="flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">
                         <span class="w-2 h-2 bg-blue-500 rounded-full live-indicator"></span>
-                        SIMULATED ENVIRONMENT
+                        INTEGRATED: SALESFORCE + GONG
                     </div>
                 </div>
             </header>
 
+            <!-- Metrics Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition">
                     <p class="text-slate-500 text-sm font-medium mb-1">Total Pipeline (Weighted)</p>
@@ -69,20 +75,21 @@
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition">
                     <p class="text-slate-500 text-sm font-medium mb-1">Win Rate (Blended)</p>
                     <h3 id="metric-winrate" class="text-3xl font-bold text-slate-900">32.4%</h3>
-                    <p class="text-blue-500 text-xs mt-2 font-bold"><i class="fas fa-info-circle"></i> Top Percentile Perf.</p>
+                    <p class="text-blue-500 text-xs mt-2 font-bold"><i class="fas fa-info-circle"></i> Industry Leading</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition">
                     <p class="text-slate-500 text-sm font-medium mb-1">Avg. Enterprise Deal</p>
                     <h3 id="metric-dealsize" class="text-3xl font-bold text-slate-900">€54,200</h3>
-                    <p class="text-slate-400 text-xs mt-2 uppercase">B2B SaaS Segment</p>
+                    <p class="text-slate-400 text-xs mt-2 uppercase font-bold">B2B SaaS</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition">
                     <p class="text-slate-500 text-sm font-medium mb-1">Quota Attainment</p>
                     <h3 id="metric-attainment" class="text-3xl font-bold text-slate-900">108%</h3>
-                    <p class="text-green-500 text-xs mt-2 font-bold"><i class="fas fa-trophy"></i> FY2025 Performance</p>
+                    <p class="text-green-500 text-xs mt-2 font-bold"><i class="fas fa-trophy"></i> FY2025 Goal</p>
                 </div>
             </div>
 
+            <!-- Charts Row -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
                 <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm">
                     <h4 class="font-bold mb-6">Revenue Trajectory (Actual vs Target)</h4>
@@ -94,47 +101,98 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h4 class="font-bold mb-4">Strategic Account Focus</h4>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+            <!-- New Intelligence Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <!-- Gong Next Steps Window -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-microphone-alt text-red-500"></i>
+                            <h4 class="font-bold">Gong Intelligence: Next Steps</h4>
+                        </div>
+                        <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-1 rounded font-mono">CRM AUTO-SYNCED</span>
+                    </div>
+                    <div class="space-y-4 flex-1" id="gongNextSteps">
+                        <div class="flex gap-4 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition border border-transparent hover:border-blue-100">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm border border-slate-200 flex-shrink-0">
+                                <i class="fas fa-paper-plane text-blue-500"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <p class="text-sm font-bold text-slate-800">Global Tech Corp • Follow-up</p>
+                                    <span class="text-[10px] text-slate-400">2h ago</span>
+                                </div>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Send technical security whitepaper regarding SSO integration as discussed with CTO."</p>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-bold">PRIORITY</span>
+                                    <span class="px-2 py-0.5 bg-slate-200 text-slate-700 rounded text-[10px] font-bold">DOCUMENTATION</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition border border-transparent hover:border-blue-100">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm border border-slate-200 flex-shrink-0">
+                                <i class="fas fa-calendar-alt text-purple-500"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <p class="text-sm font-bold text-slate-800">Iberian Retailers • Meeting</p>
+                                    <span class="text-[10px] text-slate-400">5h ago</span>
+                                </div>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Schedule deep-dive demo with the logistics team to address inventory sync concerns."</p>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <span class="px-2 py-0.5 bg-purple-100 text-purple-700 rounded text-[10px] font-bold">SALES CALL</span>
+                                    <span class="px-2 py-0.5 bg-slate-200 text-slate-700 rounded text-[10px] font-bold">DEMO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Account Focus -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col">
+                    <h4 class="font-bold mb-6">Strategic Account Focus</h4>
+                    <div class="space-y-4 flex-1">
+                        <div class="flex justify-between items-center p-4 bg-slate-50 rounded-lg hover:bg-white hover:shadow-md transition">
                             <div>
                                 <p class="text-sm font-bold text-slate-800">TechGlobal Solutions</p>
                                 <p class="text-xs text-slate-500">Negotiation Phase • Enterprise</p>
                             </div>
-                            <span class="text-sm font-bold text-blue-600">€150,000</span>
+                            <div class="text-right">
+                                <p class="text-sm font-bold text-blue-600">€150,000</p>
+                                <span class="text-[10px] text-green-600 font-bold">90% PROBABILITY</span>
+                            </div>
                         </div>
-                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+                        <div class="flex justify-between items-center p-4 bg-slate-50 rounded-lg hover:bg-white hover:shadow-md transition">
                             <div>
                                 <p class="text-sm font-bold text-slate-800">EuroFinance Group</p>
                                 <p class="text-xs text-slate-500">Proposal Stage • Mid-Market</p>
                             </div>
-                            <span class="text-sm font-bold text-blue-600">€85,000</span>
-                        </div>
-                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
-                            <div>
-                                <p class="text-sm font-bold text-slate-800">Iberian Retailers Ltd</p>
-                                <p class="text-xs text-slate-500">Discovery • Enterprise</p>
+                            <div class="text-right">
+                                <p class="text-sm font-bold text-blue-600">€85,000</p>
+                                <span class="text-[10px] text-blue-500 font-bold">65% PROBABILITY</span>
                             </div>
-                            <span class="text-sm font-bold text-blue-600">€220,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-slate-50 rounded-lg hover:bg-white hover:shadow-md transition border-2 border-dashed border-slate-200">
+                            <button class="w-full text-xs text-slate-500 font-bold py-2"><i class="fas fa-plus mr-2"></i>ADD ACCOUNT</button>
                         </div>
                     </div>
                 </div>
-                <div class="bg-slate-900 rounded-xl p-6 text-slate-300 font-mono text-xs">
-                    <p class="text-blue-400 mb-2">// Representative API Response (Mock Data)</p>
-                    <pre id="jsonPreview">
+            </div>
+
+            <!-- API Preview -->
+            <div class="bg-slate-900 rounded-xl p-6 text-slate-300 font-mono text-xs shadow-xl overflow-hidden">
+                <p class="text-blue-400 mb-2">// Revenue & Voice Intelligence Data Mapping</p>
+                <pre id="jsonPreview">
 {
   "rep_id": "JIPG-2026",
-  "status": "active_attainment",
-  "kpis": {
-    "weighted_pipeline": 2450000,
-    "current_attainment_pct": 108,
-    "velocity_score": 8.4
+  "attainment": 108,
+  "voice_intelligence": {
+    "provider": "Gong.io",
+    "last_analysis": "2026-04-14T11:45:00Z",
+    "pending_next_steps": 2
   },
   "market": "EMEA / Iberia"
 }</pre>
-                </div>
             </div>
         </main>
     </div>
@@ -178,7 +236,7 @@
 
         document.getElementById('syncBtn').addEventListener('click', function() {
             const btn = this;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Randomizing...';
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Analyzing Calls...';
             btn.disabled = true;
             setTimeout(() => {
                 const newPipe = (Math.random() * (3.0 - 2.0) + 2.0).toFixed(2);
@@ -195,14 +253,15 @@
                 document.getElementById('jsonPreview').innerText = JSON.stringify({
                     rep_id: "JIPG-2026",
                     sync_timestamp: new Date().toISOString(),
-                    kpis: {
-                        weighted_pipeline: parseFloat(newPipe) * 1000000,
-                        attainment: newAttain
+                    voice_intelligence: {
+                        provider: "Gong.io",
+                        new_actions_extracted: 2,
+                        confidence_score: 0.96
                     },
                     simulated: true
                 }, null, 2);
                 
-                btn.innerHTML = '<i class="fas fa-check"></i> Updated!';
+                btn.innerHTML = '<i class="fas fa-check"></i> Intelligence Synced!';
                 btn.className = "bg-green-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition shadow-lg shadow-green-200";
                 setTimeout(() => {
                     btn.innerHTML = '<i class="fas fa-sync-alt"></i> Mock Sync';

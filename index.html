@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorge Ignacio Pérez González | Sales & RevOps Dashboard</title>
+    <title>Jorge Ignacio Pérez González | Sales & RevOps Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -25,116 +25,120 @@
                 <a href="#" class="flex items-center gap-3 text-blue-400 bg-slate-800/50 p-3 rounded-lg"><i class="fas fa-chart-line"></i> Dashboard</a>
                 <a href="#" class="flex items-center gap-3 hover:text-blue-400 transition p-3"><i class="fas fa-funnel-dollar"></i> Pipeline</a>
                 <a href="#" class="flex items-center gap-3 hover:text-blue-400 transition p-3"><i class="fas fa-users"></i> Accounts</a>
-                <a href="#" class="flex items-center gap-3 hover:text-blue-400 transition p-3"><i class="fas fa-plug"></i> Integrations</a>
             </nav>
             <div class="mt-auto pt-10 border-t border-slate-700">
-                <p class="text-xs text-slate-400 uppercase font-bold mb-4">Personal Brand</p>
+                <p class="text-xs text-slate-400 uppercase font-bold mb-4">Account Executive</p>
                 <p class="text-sm font-medium">Jorge Ignacio Pérez González</p>
-                <p class="text-xs text-slate-500">B2B Enterprise Sales</p>
+                <p class="text-xs text-slate-500">Madrid, Spain</p>
             </div>
         </aside>
 
         <main class="flex-1 p-4 lg:p-8 overflow-y-auto">
+            <div class="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8 rounded-r-lg">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-exclamation-triangle text-amber-500"></i>
+                    <div>
+                        <p class="text-sm text-amber-800 font-bold">Portfolio Disclaimer</p>
+                        <p class="text-xs text-amber-700">This dashboard uses simulated data for representative purposes. All financial figures, client names, and performance metrics are mockups designed to demonstrate RevOps strategy and technical execution without disclosing confidential information from past employers.</p>
+                    </div>
+                </div>
+            </div>
+
             <header class="flex justify-between items-center mb-8 bg-white p-4 rounded-xl shadow-sm">
                 <div>
-                    <h1 class="text-2xl font-bold">Revenue Strategy & Performance</h1>
-                    <p class="text-slate-500 text-sm">Real-time Sales Execution Dashboard</p>
+                    <h1 class="text-2xl font-bold">Enterprise Sales Performance</h1>
+                    <p class="text-slate-500 text-sm">Strategic Revenue Management Dashboard</p>
                 </div>
                 <div class="flex gap-4">
                     <button id="syncBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition shadow-lg shadow-blue-200">
-                        <i class="fas fa-sync-alt"></i> Sync Live Data
+                        <i class="fas fa-sync-alt"></i> Mock Sync
                     </button>
-                    <div class="flex items-center gap-2 px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">
-                        <span class="w-2 h-2 bg-green-500 rounded-full live-indicator"></span>
-                        LIVE: SALESFORCE API
+                    <div class="flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full live-indicator"></span>
+                        SIMULATED ENVIRONMENT
                     </div>
                 </div>
             </header>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                    <p class="text-slate-500 text-sm font-medium mb-1">Total Pipeline</p>
-                    <h3 id="metric-pipeline" class="text-3xl font-bold text-slate-900">€2.4M</h3>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition">
+                    <p class="text-slate-500 text-sm font-medium mb-1">Total Pipeline (Weighted)</p>
+                    <h3 id="metric-pipeline" class="text-3xl font-bold text-slate-900">€2,450,000</h3>
                     <p class="text-green-500 text-xs mt-2 font-bold"><i class="fas fa-arrow-up"></i> 12% vs last month</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                    <p class="text-slate-500 text-sm font-medium mb-1">Win Rate</p>
-                    <h3 id="metric-winrate" class="text-3xl font-bold text-slate-900">32%</h3>
-                    <p class="text-blue-500 text-xs mt-2 font-bold"><i class="fas fa-info-circle"></i> Industry Avg: 24%</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition">
+                    <p class="text-slate-500 text-sm font-medium mb-1">Win Rate (Blended)</p>
+                    <h3 id="metric-winrate" class="text-3xl font-bold text-slate-900">32.4%</h3>
+                    <p class="text-blue-500 text-xs mt-2 font-bold"><i class="fas fa-info-circle"></i> Top Percentile Perf.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                    <p class="text-slate-500 text-sm font-medium mb-1">Avg. Deal Size</p>
-                    <h3 id="metric-dealsize" class="text-3xl font-bold text-slate-900">€54k</h3>
-                    <p class="text-slate-400 text-xs mt-2 uppercase">Enterprise Segment</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition">
+                    <p class="text-slate-500 text-sm font-medium mb-1">Avg. Enterprise Deal</p>
+                    <h3 id="metric-dealsize" class="text-3xl font-bold text-slate-900">€54,200</h3>
+                    <p class="text-slate-400 text-xs mt-2 uppercase">B2B SaaS Segment</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                    <p class="text-slate-500 text-sm font-medium mb-1">Forecast Accuracy</p>
-                    <h3 id="metric-accuracy" class="text-3xl font-bold text-slate-900">97%</h3>
-                    <p class="text-green-500 text-xs mt-2 font-bold"><i class="fas fa-check"></i> Within ±3% margin</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition">
+                    <p class="text-slate-500 text-sm font-medium mb-1">Quota Attainment</p>
+                    <h3 id="metric-attainment" class="text-3xl font-bold text-slate-900">108%</h3>
+                    <p class="text-green-500 text-xs mt-2 font-bold"><i class="fas fa-trophy"></i> FY2025 Performance</p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
                 <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm">
-                    <div class="flex justify-between items-center mb-6">
-                        <h4 class="font-bold">Revenue Trend vs Goal</h4>
-                        <select class="bg-slate-50 border border-slate-200 rounded-md text-xs p-1">
-                            <option>Q1 2026</option>
-                            <option>Q2 2026</option>
-                        </select>
-                    </div>
-                    <canvas id="revenueChart" height="120"></canvas>
+                    <h4 class="font-bold mb-6">Revenue Trajectory (Actual vs Target)</h4>
+                    <canvas id="revenueChart" height="140"></canvas>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h4 class="font-bold mb-6">Pipeline Distribution</h4>
+                    <h4 class="font-bold mb-6">Pipeline by Stage</h4>
                     <canvas id="pipelineChart" height="200"></canvas>
                 </div>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm mb-8">
-                <h4 class="font-bold mb-6">Data Source Integrations (Live Stack)</h4>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
-                    <div class="flex flex-col items-center gap-2">
-                        <i class="fab fa-salesforce text-3xl text-blue-500"></i>
-                        <span class="text-xs font-bold">Salesforce</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <i class="fab fa-hubspot text-3xl text-orange-500"></i>
-                        <span class="text-xs font-bold">HubSpot</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <i class="fas fa-microphone-alt text-3xl text-red-500"></i>
-                        <span class="text-xs font-bold">Gong.io</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <i class="fas fa-envelope-open-text text-3xl text-purple-500"></i>
-                        <span class="text-xs font-bold">Outreach</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <i class="fas fa-database text-3xl text-indigo-500"></i>
-                        <span class="text-xs font-bold">Snowflake</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <i class="fab fa-slack text-3xl text-yellow-500"></i>
-                        <span class="text-xs font-bold">Slack</span>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold mb-4">Strategic Account Focus</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">TechGlobal Solutions</p>
+                                <p class="text-xs text-slate-500">Negotiation Phase • Enterprise</p>
+                            </div>
+                            <span class="text-sm font-bold text-blue-600">€150,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">EuroFinance Group</p>
+                                <p class="text-xs text-slate-500">Proposal Stage • Mid-Market</p>
+                            </div>
+                            <span class="text-sm font-bold text-blue-600">€85,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">Iberian Retailers Ltd</p>
+                                <p class="text-xs text-slate-500">Discovery • Enterprise</p>
+                            </div>
+                            <span class="text-sm font-bold text-blue-600">€220,000</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="bg-slate-900 rounded-xl p-6 text-slate-300 font-mono text-xs overflow-hidden">
-                <p class="text-blue-400 mb-2">// Sample Data Object from Salesforce API Mapping</p>
-                <pre id="jsonPreview">
+                <div class="bg-slate-900 rounded-xl p-6 text-slate-300 font-mono text-xs">
+                    <p class="text-blue-400 mb-2">// Representative API Response (Mock Data)</p>
+                    <pre id="jsonPreview">
 {
-  "account_executive": "Jorge Ignacio Pérez González",
-  "pipeline": 2450000,
-  "quota_attainment": 108,
-  "last_sync": "2026-04-14T12:55:00Z",
-  "active_deals": [
-    { "name": "Global Tech Corp", "value": 150000, "stage": "Negotiation" },
-    { "name": "Financiera Euro", "value": 85000, "stage": "Proposal" }
-  ]
+  "rep_id": "JIPG-2026",
+  "status": "active_attainment",
+  "kpis": {
+    "weighted_pipeline": 2450000,
+    "current_attainment_pct": 108,
+    "velocity_score": 8.4
+  },
+  "market": "EMEA / Iberia"
 }</pre>
+                </div>
             </div>
         </main>
     </div>
+
     <script>
         const ctxRev = document.getElementById('revenueChart').getContext('2d');
         const revenueChart = new Chart(ctxRev, {
@@ -174,41 +178,38 @@
 
         document.getElementById('syncBtn').addEventListener('click', function() {
             const btn = this;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Syncing...';
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Randomizing...';
             btn.disabled = true;
-
             setTimeout(() => {
-                const newPipe = (Math.random() * (3.0 - 2.0) + 2.0).toFixed(1);
-                const newWin = Math.floor(Math.random() * (40 - 28) + 28);
-                const newAccuracy = Math.floor(Math.random() * (99 - 94) + 94);
+                const newPipe = (Math.random() * (3.0 - 2.0) + 2.0).toFixed(2);
+                const newWin = (Math.random() * (35 - 28) + 28).toFixed(1);
+                const newAttain = Math.floor(Math.random() * (115 - 95) + 95);
                 
                 document.getElementById('metric-pipeline').innerText = `€${newPipe}M`;
                 document.getElementById('metric-winrate').innerText = `${newWin}%`;
-                document.getElementById('metric-accuracy').innerText = `${newAccuracy}%`;
-
+                document.getElementById('metric-attainment').innerText = `${newAttain}%`;
+                
                 revenueChart.data.datasets[0].data = revenueChart.data.datasets[0].data.map(v => v * (1 + (Math.random() * 0.1 - 0.05)));
                 revenueChart.update();
-
-                const now = new Date().toISOString();
+                
                 document.getElementById('jsonPreview').innerText = JSON.stringify({
-                    account_executive: "Jorge Ignacio Pérez González",
-                    pipeline: parseFloat(newPipe) * 1000000,
-                    quota_attainment: 100 + Math.floor(Math.random() * 20),
-                    last_sync: now,
-                    status: "SUCCESS"
+                    rep_id: "JIPG-2026",
+                    sync_timestamp: new Date().toISOString(),
+                    kpis: {
+                        weighted_pipeline: parseFloat(newPipe) * 1000000,
+                        attainment: newAttain
+                    },
+                    simulated: true
                 }, null, 2);
-
-                btn.innerHTML = '<i class="fas fa-check"></i> Synced!';
-                btn.classList.remove('bg-blue-600');
-                btn.classList.add('bg-green-600');
-
+                
+                btn.innerHTML = '<i class="fas fa-check"></i> Updated!';
+                btn.className = "bg-green-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition shadow-lg shadow-green-200";
                 setTimeout(() => {
-                    btn.innerHTML = '<i class="fas fa-sync-alt"></i> Sync Live Data';
-                    btn.classList.remove('bg-green-600');
-                    btn.classList.add('bg-blue-600');
+                    btn.innerHTML = '<i class="fas fa-sync-alt"></i> Mock Sync';
+                    btn.className = "bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition shadow-lg shadow-blue-200";
                     btn.disabled = false;
                 }, 2000);
-            }, 1500);
+            }, 1000);
         });
     </script>
 </body>

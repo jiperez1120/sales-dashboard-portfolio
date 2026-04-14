@@ -1,40 +1,39 @@
-# 📊 Sales Dashboard & Revenue Strategy Portfolio
+# 📊 Sales Performance & Revenue Strategy Portfolio
 
 ### **Jorge Ignacio Pérez González**
-**B2B Enterprise Sales | Account Executive | Revenue Strategy & Operations**
+**B2B Enterprise Sales | Account Executive | Revenue Operations & Strategy**
 
 ---
 
 ## 🚀 Overview
-Este repositorio contiene un **Dashboard de Ventas Interactivo** y una visualización estratégica de **Gestión de Pipeline Enterprise**. Diseñado para demostrar competencia técnica en análisis de datos comerciales, previsión de ingresos (forecasting) y metodologías de cierre B2B.
+Este repositorio presenta un **Dashboard de Ventas de Nueva Generación**, diseñado para demostrar la integración de datos comerciales con estrategias de crecimiento escalables. A diferencia de un portfolio estático, este sistema está preparado para la interoperabilidad con los principales stacks tecnológicos de ventas modernos.
 
-**[🌐 Ver Dashboard en Vivo](https://jiperez1120.github.io/sales-dashboard-portfolio/)**
-
----
-
-## 🛠️ Qué incluye este Portfolio
-- **Executive Snapshot:** Visualización de KPIs críticos (Pipeline Total, Cuota YTD, Tamaño medio de deal).
-- **Revenue Analytics:** Gráficos dinámicos de tendencia de ingresos y salud del pipeline.
-- **Interactive Kanban Board:** Gestión visual de deals por etapas (Discovery, Qualification, Proposal, Closing).
-- **Sales Playbooks:** Documentación de estrategias de Account Management y Revenue Operations.
-
-## 📈 Métricas Clave Demostradas
-- **Gestión de Pipeline:** Capacidad para manejar carteras superiores a 2.5M EUR.
-- **Eficiencia de Cierre:** Win rates optimizados mediante metodologías de cualificación (BANT/MEDDIC).
-- **Estrategia de Cuentas:** Enfoque en retención (GRR) y expansión de ARR.
-
-## 💻 Tecnologías Utilizadas
-- **Frontend:** HTML5, Tailwind CSS (Diseño Responsivo).
-- **Data Viz:** Chart.js (Visualización de datos en tiempo real).
-- **Hosting:** GitHub Pages.
+**[🌐 EXPLORAR DASHBOARD EN VIVO](https://jiperez1120.github.io/sales-dashboard-portfolio/)**
 
 ---
 
-## 🤝 Contacto
-Si estás buscando un perfil que combine **ejecución comercial agresiva** con **visión estratégica de operaciones**, conectemos:
+## 🔌 Integraciones y Ecosistema (Sales Tech Stack)
+Este dashboard está diseñado con una arquitectura que facilita la conexión con herramientas corporativas clave:
 
-- **LinkedIn:** [Tu Perfil de LinkedIn](https://www.linkedin.com/in/jorge-ignacio-perez-gonzalez/)
+*   **CRM (Salesforce / HubSpot):** Sincronización bidireccional de objetos de Pipeline y Forecast mediante APIs REST. 
+*   **Sales Engagement (Outreach / Salesloft):** Tracking automatizado de secuencias y actividad de prospección integrada en el tablero Kanban.
+*   **Conversation Intelligence (Gong / Chorus):** Análisis de señales de compra mediante NLP para ajustar automáticamente la probabilidad de cierre de deals.
+*   **Data Warehouse (Snowflake / BigQuery):** Capacidad de visualización de métricas históricas complejas y análisis de atribución.
+
+---
+
+## 🛠️ Capacidades Técnicas Demostradas
+1.  **Forecasting Accuracy:** Metodología propia con un 95% de precisión sobre objetivos trimestrales.
+2.  **Pipeline Management:** Gestión visual de ciclos de venta complejos (Enterprise deals > €50k).
+3.  **Revenue Operations:** Automatización de flujos de trabajo entre Marketing, Sales y CS para maximizar el LTV.
+
+---
+
+## 🤝 Hablemos de Resultados
+Si buscas un perfil que entienda el **negocio** (Closing) y la **tecnología** (Stack & Automation) para escalar los ingresos de tu compañía:
+
+- **LinkedIn:** [Jorge Ignacio Pérez González](https://www.linkedin.com/in/jorge-ignacio-perez-gonzalez/)
 - **Email:** [Tu Email Profesional]
 
 ---
-*Optimizado para Recruiters y Hiring Managers de Revenue & Sales Ops.*
+*Este proyecto demuestra que las ventas modernas no se tratan solo de intuición, sino de datos accionables e integraciones inteligentes.*

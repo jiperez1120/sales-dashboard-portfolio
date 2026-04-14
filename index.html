@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Ignacio Pérez González | Sales & Revenue Strategy Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-20 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-2/3">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Jorge Ignacio Pérez González</h1>
+                <p class="text-xl md:text-2xl text-slate-300 mb-8">B2B Enterprise Sales | Account Management | Revenue Strategy</p>
+                <div class="flex gap-4">
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold flex items-center gap-2">
+                        <i class="fab fa-linkedin"></i> LinkedIn Profile
+                    </a>
+                    <a href="#pipeline" class="border border-slate-400 hover:bg-white/10 px-6 py-3 rounded-lg font-semibold">
+                        View Live Pipeline
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/3 mt-10 md:mt-0 flex justify-center">
+                <div class="w-48 h-48 bg-slate-700 rounded-full border-4 border-blue-500/30 flex items-center justify-center">
+                    <i class="fas fa-user-tie text-7xl text-slate-400"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Executive Summary Dashboard -->
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 border-l-4 border-blue-600 pl-4">Sales Performance Snapshot</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 card-hover">
+                <p class="text-slate-500 text-sm font-semibold uppercase">Total Pipeline</p>
+                <h3 class="text-3xl font-bold text-blue-600">€2.5M</h3>
+                <p class="text-green-600 text-sm mt-2"><i class="fas fa-arrow-up"></i> 15% vs Last Q</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 card-hover">
+                <p class="text-slate-500 text-sm font-semibold uppercase">YTD Quota</p>
+                <h3 class="text-3xl font-bold text-slate-800">108%</h3>
+                <p class="text-slate-400 text-sm mt-2">Target: 100%</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 card-hover">
+                <p class="text-slate-500 text-sm font-semibold uppercase">Avg. Deal Size</p>
+                <h3 class="text-3xl font-bold text-slate-800">€45K</h3>
+                <p class="text-slate-400 text-sm mt-2">Enterprise Segment</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 card-hover">
+                <p class="text-slate-500 text-sm font-semibold uppercase">Win Rate</p>
+                <h3 class="text-3xl font-bold text-slate-800">32%</h3>
+                <p class="text-slate-400 text-sm mt-2">Discovery to Close</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                <h4 class="text-lg font-bold mb-6">Revenue Growth Trend</h4>
+                <canvas id="revenueChart" height="200"></canvas>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                <h4 class="text-lg font-bold mb-6">Pipeline by Stage</h4>
+                <canvas id="pipelineChart" height="200"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Pipeline Board -->
+    <section id="pipeline" class="py-16 bg-slate-100 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-10 border-l-4 border-blue-600 pl-4">Enterprise Pipeline Management</h2>
+            
+            <div class="flex overflow-x-auto pb-6 gap-4">
+                <!-- Prospecting -->
+                <div class="min-w-[300px] flex-1">
+                    <div class="bg-slate-200 p-3 rounded-t-lg font-bold text-slate-600 flex justify-between">
+                        <span>Discovery</span>
+                        <span class="bg-slate-300 px-2 rounded">4</span>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-3">
+                        <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-slate-400">
+                            <span class="text-xs font-bold text-blue-600 uppercase">Cloud Corp</span>
+                            <p class="font-bold mt-1">€75,000</p>
+                            <p class="text-xs text-slate-500 mt-2"><i class="far fa-clock"></i> Next: Demo (Apr 20)</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-slate-400">
+                            <span class="text-xs font-bold text-blue-600 uppercase">Tech Retail SA</span>
+                            <p class="font-bold mt-1">€32,000</p>
+                            <p class="text-xs text-slate-500 mt-2"><i class="far fa-clock"></i> Next: Intro Call</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Qualification -->
+                <div class="min-w-[300px] flex-1">
+                    <div class="bg-blue-100 p-3 rounded-t-lg font-bold text-blue-800 flex justify-between">
+                        <span>Qualification</span>
+                        <span class="bg-blue-200 px-2 rounded">3</span>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-3">
+                        <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
+                            <span class="text-xs font-bold text-blue-600 uppercase">Global Log</span>
+                            <p class="font-bold mt-1">€120,000</p>
+                            <p class="text-xs text-slate-500 mt-2"><i class="fas fa-check-circle text-green-500"></i> BANT Confirmed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proposal -->
+                <div class="min-w-[300px] flex-1">
+                    <div class="bg-indigo-100 p-3 rounded-t-lg font-bold text-indigo-800 flex justify-between">
+                        <span>Proposal</span>
+                        <span class="bg-indigo-200 px-2 rounded">2</span>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-3">
+                        <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-indigo-500">
+                            <span class="text-xs font-bold text-blue-600 uppercase">Fintech Hub</span>
+                            <p class="font-bold mt-1">€55,000</p>
+                            <p class="text-xs text-slate-500 mt-2"><i class="fas fa-file-invoice"></i> Proposal Sent</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Closing -->
+                <div class="min-w-[300px] flex-1">
+                    <div class="bg-green-100 p-3 rounded-t-lg font-bold text-green-800 flex justify-between">
+                        <span>Closing</span>
+                        <span class="bg-green-200 px-2 rounded">2</span>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-3">
+                        <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-green-500">
+                            <span class="text-xs font-bold text-blue-600 uppercase">Euro Bank</span>
+                            <p class="font-bold mt-1">€250,000</p>
+                            <p class="text-xs text-slate-500 mt-2"><i class="fas fa-signature"></i> Final Review</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy & Playbooks -->
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 border-l-4 border-blue-600 pl-4">Sales Playbooks & Strategy</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 card-hover">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-bullseye text-xl"></i>
+                </div>
+                <h5 class="text-xl font-bold mb-4">Target Account Strategy</h5>
+                <p class="text-slate-600 text-sm leading-relaxed">Multichannel outreach framework for Fortune 500 accounts, resulting in 25% higher response rates.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 card-hover">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-sync text-xl"></i>
+                </div>
+                <h5 class="text-xl font-bold mb-4">Renewal Operations</h5>
+                <p class="text-slate-600 text-sm leading-relaxed">Retention strategies maintaining 98% GRR across enterprise accounts through proactive health checks.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 card-hover">
+                <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-chart-line text-xl"></i>
+                </div>
+                <h5 class="text-xl font-bold mb-4">Forecasting Accuracy</h5>
+                <p class="text-slate-600 text-sm leading-relaxed">Data-driven forecast methodology with 95% accuracy within the same quarter.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center">
+        <p class="mb-4">Designed for LinkedIn Portfolio | 2026</p>
+        <div class="flex justify-center gap-6">
+            <a href="#" class="hover:text-white"><i class="fab fa-github text-xl"></i></a>
+            <a href="#" class="hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
+            <a href="mailto:jorge.perez@example.com" class="hover:text-white"><i class="fas fa-envelope text-xl"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Revenue Chart
+        const ctxRev = document.getElementById('revenueChart').getContext('2d');
+        new Chart(ctxRev, {
+            type: 'line',
+            data: {
+                labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                datasets: [{
+                    label: 'Actual Revenue (€)',
+                    data: [420000, 580000, 510000, 720000],
+                    borderColor: '#2563eb',
+                    backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: { plugins: { legend: { display: false } } }
+        });
+
+        // Pipeline Chart
+        const ctxPipe = document.getElementById('pipelineChart').getContext('2d');
+        new Chart(ctxPipe, {
+            type: 'doughnut',
+            data: {
+                labels: ['Discovery', 'Qualification', 'Proposal', 'Closing'],
+                datasets: [{
+                    data: [40, 25, 20, 15],
+                    backgroundColor: ['#94a3b8', '#3b82f6', '#6366f1', '#22c55e'],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { position: 'right' } } }
+        });
+    </script>
+</body>
+</html>
